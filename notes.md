@@ -10,11 +10,6 @@ Create a new repo
 
 Initializing package.json
   
-* At the command prompt in your git-test folder, type
-  
-  `npm init`
-* Follow along the prompts and answer the questions as follows: accept the default values for most of the entries, except set the entry point to index.html
-
 Installing an NPM Module
 
 * Install an NPM module, lite-server, that allows you to run a Node.js based development web server and serve up your project files. To do this, type the following at the prompt:
@@ -54,6 +49,8 @@ Setting up .gitignore
 
 ## React
 
+### Start
+
 Installing Yarn
 
 * Yarn is another package manager like NPM, but is better suited and faster to work with for React applications. So let us install yarn and use it for building our React applications.
@@ -61,6 +58,9 @@ Installing Yarn
 Installing *create-react-app*
 
 Generating and Serving a React Project using *create-react-app*
+
+### Configuring a React Application
+
 
 ## Reference
 
