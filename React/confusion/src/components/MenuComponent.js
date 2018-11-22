@@ -1,5 +1,5 @@
-import React, { Component } from './react';
-import { Media } from './reactstrap';
+import React, { Component } from 'react';
+import { Media } from 'reactstrap';
 
 class Menu extends Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class Menu extends Component {
             dishes: [
                 {
                   id: 0,
-                  name:'Uthappizza',
+                  name:'Pizza',
                   image: 'assets/images/pizza.png',
                   category: 'mains',
                   label:'Hot',
@@ -16,7 +16,7 @@ class Menu extends Component {
                   description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
                {
                   id: 1,
-                  name:'Zucchipakoda',
+                  name:'Cake',
                   image: 'assets/images/cake.png',
                   category: 'appetizer',
                   label:'',
@@ -24,7 +24,7 @@ class Menu extends Component {
                   description:'Deep fried Zucchini coated with mildly spicedChickpea flour batter accompanied with a sweet-tangy tamarind sauce'                        },
                 {
                     id: 2,
-                    name:'Vadonut',
+                    name:'Sausage',
                     image: 'assets/images/sausage.png',
                     category: 'appetizer',
                     label:'New',
@@ -32,7 +32,7 @@ class Menu extends Component {
                     description:'A quintessential ConFusion experience, is it a vada or is it a donut?'                        },
                 {
                     id: 3,
-                    name:'ElaiCheese Cake',
+                    name:'Fruits',
                     image: 'assets/images/fruit.png',
                     category: 'dessert',
                     label:'',
