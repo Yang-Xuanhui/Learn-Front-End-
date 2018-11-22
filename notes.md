@@ -61,6 +61,17 @@ Generating and Serving a React Project using *create-react-app*
 
 ### Configuring a React Application
 
+Configure your React Project to use Reactstrap
+
+* To configure your project to use reactstrap, type the following at the prompt to install reactstrap, and Bootstrap 4:
+  
+  ```
+   yarn add bootstrap@4.0.0
+   yarn add reactstrap@5.0.0
+   yarn add react-popper@0.9.2
+  ```
+
+    **NOTE** : Install these packages at the < confusion > folder
 
 ## Reference
 
