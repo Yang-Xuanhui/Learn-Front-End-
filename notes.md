@@ -1,5 +1,7 @@
 # Notes about Learning Front-End Web Development with React
 
+Write down the steps and some notes about developing an application through the [course](https://www.coursera.org/learn/front-end-react/home/welcome)
+
 ## Set up Development Environment: Git and Node
 
 ### Git
@@ -79,9 +81,15 @@ Learn about React components and how we construct an React component and design 
 
 Implement functional components in React
 
+### Router
+
 Add header and footer
 
 Use React Router
+
+### Single Page Application
+
+Develop the React application as a single page application
 
 ## Reference
 
