@@ -73,6 +73,10 @@ Configure your React Project to use Reactstrap
 
     **NOTE** : Install these packages at the < confusion > folder
 
+### React Components
+
+Learn about React components and how we construct an React component and design its views.
+
 ## Reference
 
 [course](https://www.coursera.org/learn/front-end-react/home/welcome)
