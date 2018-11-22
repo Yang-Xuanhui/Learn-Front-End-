@@ -77,6 +77,10 @@ Configure your React Project to use Reactstrap
 
 Learn about React components and how we construct an React component and design its views.
 
+Implement functional components in React
+
+Add header and footer
+
 ## Reference
 
 [course](https://www.coursera.org/learn/front-end-react/home/welcome)
