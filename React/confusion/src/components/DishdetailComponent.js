@@ -24,7 +24,8 @@ function RenderDish({dish}) {
             );
     }
 
-function RenderComment(comments){
+
+    function RenderComments({comments, addComment, dishId}) {
     if(comments != null){
         const comment = comments.map((comment) => {
             return (
@@ -41,9 +42,12 @@ function RenderComment(comments){
             );
         });
         return (
+            <div>
                 <Media list>
                     {comment}
                 </Media>
+                <CommentForm dishId={dishId} addComment={addComment} />
+            </div>
             );
     }
     else
@@ -53,12 +57,10 @@ function RenderComment(comments){
 }
 
 const  DishDetail = (props) => {
-    const comment = RenderComment(props.comments)
         return (
             <div className="container">
             <div className="row">
                 <Breadcrumb>
-
                     <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
                     <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                 </Breadcrumb>
@@ -73,8 +75,11 @@ const  DishDetail = (props) => {
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
-                        {comment}
-                        <CommentForm/>
+                    <RenderComments comments={props.comments}
+        addComment={props.addComment}
+        dishId={props.dish.id}
+      />
+
                 </div>
             </div>
             </div>
@@ -117,9 +122,13 @@ class CommentForm extends Component{
     
         handleSubmit(event) {
             this.toggleModal();
+            this.props.addComment(this.props.dishId, this.state.rating, this.state.author, this.state.comment);
             console.log('Current State is: ' + JSON.stringify(this.state));
             alert('Current State is: ' + JSON.stringify(this.state));
             event.preventDefault();
+            return{
+
+            }
     
         }
 
