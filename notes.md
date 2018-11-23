@@ -108,7 +108,11 @@ Develop the React application as a single page application
 
 ### Controlled Forms
 
+Add Send feedback in ContactComponent.js
 
+### Uncontrolled Forms
+
+Add Login in HeaderComponent.js
 
 ## Reference
 
