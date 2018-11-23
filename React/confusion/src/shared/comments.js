@@ -20,9 +20,9 @@ export const COMMENTS =
         id: 2,
         dishId: 0,
         rating: 3,
-        comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
-        date: "2015-02-13T17:57:28.556094Z"
+        comment: 'Eat it, just eat it!',
+        author: 'Michael Jaikishan',
+        date:  '2015-02-13T17:57:28.556094Z'
     },
     {
         id: 3,

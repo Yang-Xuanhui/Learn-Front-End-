@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 function RenderDish({dish}) {
@@ -19,26 +19,34 @@ function RenderDish({dish}) {
             );
     }
 
-    function RenderComments(comments){
-        
-        if(comments != null){
-            return(
-                <div>
-                    <h4>Comments</h4>
-                    <ul className="list-unstyled">
-                        <li>{comments.comment}<br/>{comments.author}  {comments.date}</li>
-                    </ul>
-                </div>
-            
-            );
-        }
-        else
-            return(
-                <div></div>
+function RenderComment(comments){
+    if(comments != null){
+        return (
+                <Media tag="li">
+                          <Media body className="ml-5">
+                            <p>{comments.comment}</p>
+                            <p>{comments.author} {comments.date}</p>
+                          </Media>
+                </Media>
             );
     }
+    else
+        return(
+            <div></div>
+        );
+}
 
-    const  DishDetail = (props) => {
+const  DishDetail = (props) => {
+        const comment = props.comments.map((comment) => {
+            return (
+                <div key={comment.id}>
+                    <Media list>
+                        <RenderComment comments={comment}/>
+                    </Media>
+                </div>
+            );
+        });
+    
         return (
             <div className="container">
             <div className="row">
@@ -57,12 +65,13 @@ function RenderDish({dish}) {
                     <RenderDish dish={props.dish} />
                 </div>
                 <div className="col-12 col-md-5 m-1">
-                    <RenderComments comments={props.comments} />
+                    <h4>Comments</h4>
+                    <div>{comment}</div>
                 </div>
             </div>
             </div>
         );
         
-      }
+}
 
 export default DishDetail;
