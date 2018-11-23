@@ -21,14 +21,22 @@ function RenderDish({dish}) {
 
 function RenderComment(comments){
     if(comments != null){
-        var comment = comments.comments
-        return (
-                <Media tag="li">
+        const comment = comments.map((comment) => {
+            return (
+                <div key={comment.id}>
+                    <Media tag="li">
                           <Media body className="ml-5">
                             <p>{comment.comment} <br/> {comment.author} &nbsp;
                              {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
                             </p>
                           </Media>
+                    </Media>
+                </div>
+            );
+        });
+        return (
+                <Media list>
+                    {comment}
                 </Media>
             );
     }
@@ -39,16 +47,7 @@ function RenderComment(comments){
 }
 
 const  DishDetail = (props) => {
-        const comment = props.comments.map((comment) => {
-            return (
-                <div key={comment.id}>
-                    <Media list>
-                        <RenderComment comments={comment}/>
-                    </Media>
-                </div>
-            );
-        });
-    
+    const comment = RenderComment(props.comments)
         return (
             <div className="container">
             <div className="row">
@@ -68,7 +67,9 @@ const  DishDetail = (props) => {
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
-                    <div>{comment}</div>
+                    <div>
+                        {comment}
+                    </div>
                 </div>
             </div>
             </div>
