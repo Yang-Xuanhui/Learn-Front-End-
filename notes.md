@@ -81,15 +81,34 @@ Learn about React components and how we construct an React component and design 
 
 Implement functional components in React
 
+>MainComponent.js  
+>MenuComponent.js  
+>DishdetailComponent.js
+
 ### Router
 
-Add header and footer
+Add header and footer  
 
 Use React Router
+
+>HeaderComponent.js  
+>FooterComponent.js  
 
 ### Single Page Application
 
 Develop the React application as a single page application
+
+>HomeComponent.js  
+>ContactComponent.js  
+>AboutComponent.js
+
+(update)
+>MenuComponent.js  
+>DishdetailComponent.js
+
+### Controlled Forms
+
+
 
 ## Reference
 
