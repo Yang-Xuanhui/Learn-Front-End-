@@ -18,7 +18,7 @@ function RenderLeader ({leader}) {
     );
 }
 
-const Aboutus = (props) => {
+const About = (props) => {
     
     const leader = props.leaders.map((leader) => {
         return (
@@ -49,4 +49,4 @@ const Aboutus = (props) => {
     );
 }
 
-export default Aboutus;
+export default About;
