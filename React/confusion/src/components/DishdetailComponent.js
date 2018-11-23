@@ -21,11 +21,13 @@ function RenderDish({dish}) {
 
 function RenderComment(comments){
     if(comments != null){
+        var comment = comments.comments
         return (
                 <Media tag="li">
                           <Media body className="ml-5">
-                            <p>{comments.comment}</p>
-                            <p>{comments.author} {comments.date}</p>
+                            <p>{comment.comment} <br/> {comment.author} &nbsp;
+                             {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
+                            </p>
                           </Media>
                 </Media>
             );
