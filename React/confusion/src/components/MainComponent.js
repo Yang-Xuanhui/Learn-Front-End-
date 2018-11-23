@@ -53,7 +53,8 @@ class Main extends Component {
       const DishWithId = ({match}) => {
         return(
             <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
-              comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+          comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+            
         );
       };
       
@@ -63,7 +64,7 @@ class Main extends Component {
           <div>
             <Switch>
                 <Route path='/home' component={HomePage} />
-                <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />} />
+                <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />
                 <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
                 <Route path='/menu/:dishId' component={DishWithId} />
                 <Route exact path='/contactus' component={Contact} />} />
