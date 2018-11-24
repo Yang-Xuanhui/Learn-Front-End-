@@ -93,10 +93,10 @@ class CommentForm extends Component{
             this.state = {
                 isModalOpen: false,
                 rating: '',
-                name: '',
+                author: '',
                 comment: '',
                 touched: {
-                    name: false
+                    author: false
                 }
             };
             this.toggleModal = this.toggleModal.bind(this);
@@ -135,13 +135,13 @@ class CommentForm extends Component{
         validate(name) {
 
             const errors = {
-                name: ''
+                author: ''
             };
     
-            if (this.state.touched.name && name.length < 3)
-                errors.name = 'Must be greater than 3 characters';
-            else if (this.state.touched.name && name.length > 15)
-                errors.name = 'Must be 15 character or less';
+            if (this.state.touched.author && name.length < 3)
+                errors.author = 'Must be greater than 3 characters';
+            else if (this.state.touched.author && name.length > 15)
+                errors.author = 'Must be 15 character or less';
     
             return errors;
         }
@@ -153,7 +153,7 @@ class CommentForm extends Component{
         }
 
         render() {
-            const errors = this.validate(this.state.name);
+            const errors = this.validate(this.state.author);
             return(
                 <div>
                     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
@@ -173,14 +173,14 @@ class CommentForm extends Component{
                                 </FormGroup>
                                 <FormGroup>
                                     <Label htmlFor="yourname">Your Name</Label>
-                                    <Input type="text" id="name" name="name"
+                                    <Input type="text" id="author" name="author"
                                         placeholder="Your Name"
-                                        value={this.state.name}
+                                        value={this.state.author}
                                         valid={errors.name === ''}
                                         invalid={errors.name !== ''}
-                                        onBlur={this.handleBlur('name')}
+                                        onBlur={this.handleBlur('author')}
                                         onChange={this.handleInputChange} />
-                                    <FormFeedback>{errors.name}</FormFeedback>   
+                                    <FormFeedback>{errors.author}</FormFeedback>   
                                         
                                 </FormGroup>
                                 <FormGroup>
