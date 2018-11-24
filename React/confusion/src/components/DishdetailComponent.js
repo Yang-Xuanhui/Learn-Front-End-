@@ -5,7 +5,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle,
     Nav, NavItem,  Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input,FormFeedback } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+import { Loading } from './LoadingComponent';
 
 function RenderDish({dish}) {
         if (dish != null)
@@ -57,6 +57,25 @@ function RenderDish({dish}) {
 }
 
 const  DishDetail = (props) => {
+    if (props.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.errMess) {
+        return(
+            <div className="container">
+                <div className="row">            
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    }
+    else if (props.dish != null) 
         return (
             <div className="container">
             <div className="row">
@@ -157,7 +176,7 @@ class CommentForm extends Component{
             return(
                 <div>
                     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                        <ModalHeader toggle={this.toggleModal}>Submit &nbsp; Comment</ModalHeader>
+                        <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
                         <ModalBody>
                             <Form onSubmit={this.handleSubmit}>
                                 <FormGroup>
@@ -204,7 +223,7 @@ class CommentForm extends Component{
                         
                                 <Nav className="ml-auto">
                                     <NavItem>
-                                        <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Submit &nbsp; Comment</Button>
+                                        <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Submit Comment</Button>
                                     </NavItem>
                                 </Nav>
                             
