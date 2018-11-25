@@ -118,6 +118,8 @@ Add Login in HeaderComponent.js
 
 ......
 
+## Unit Test
+
 ## Reference
 
 [course](https://www.coursera.org/learn/front-end-react/home/welcome)
@@ -125,3 +127,7 @@ Add Login in HeaderComponent.js
 [react forms](https://react.docschina.org/docs/forms.html)
 
 [create react app](https://facebook.github.io/create-react-app/docs/getting-started)
+
+[unit-test-1](http://www.cnblogs.com/dh-dh/p/5432447.html)
+
+[unit-test-2](http://www.51testing.com/html/73/n-3722073.html)
